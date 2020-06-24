@@ -1,0 +1,210 @@
+*, *::before,
+*, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $helveticaNeueCyr;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 400;
+  color: $grey;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  margin: 0;
+}
+
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  height: 100%;
+  max-width: 1230px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row {
+  display: grid;
+}
+
+p {
+  margin: 0;
+}
+
+.section {
+  position: relative;
+  z-index: 70;
+  min-height: 100vh;
+  overflow: hidden;
+
+  padding-left: 200px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &__name {
+    position: absolute;
+    font-size: 10px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: $lightBlack;
+    width: 100px;
+    transform: translateX(75%);
+
+    &--yellow {
+      color: $yellow;
+    }
+  }
+
+  @include tablets {
+    padding-left: 0;
+  }
+
+  @media (max-width: 760px) {
+    height: auto;
+  }
+
+  @include phones {
+    padding: 50px 0;
+  }
+}
+
+.section-title {
+  font-family: $cormorant;
+  font-weight: 500;
+  margin-bottom: 56px;
+  font-size: 68px;
+  line-height: 68px;
+  color: $black;
+
+  &--white {
+    color: $white;
+  }
+
+  @include tablets {
+    font-size: 55px;
+    line-height: 55px;
+  }
+
+  @include phones {
+    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 7px 60px;
+  border: transparent;
+  font-size: 10px;
+  line-height: 26px;
+  text-align: center;
+  color: $white;
+  background-color: $yellow;
+  border-radius: 3px;
+  transition: $smothy;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.modal__link {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 2px;
+  font-size: 14px;
+  line-height: 26px;
+  color: $yellow;
+  border-bottom: 1px solid $yellow;
+  transition: $smothy;
+
+  &:hover {
+    color: darken($yellow, 10%);
+    border-color: darken($yellow, 15%);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 0.4s;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+  animation-duration: 0.7s;
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 0.4s;
+}

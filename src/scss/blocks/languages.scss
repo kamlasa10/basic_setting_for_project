@@ -1,0 +1,19 @@
+.languages {
+  &__choise {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 10px;
+    line-height: 26px;
+    color: $lightBlack;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--selected {
+      color: #B2AEAE;
+      border-bottom: 1px solid $yellow;
+    }
+  }
+}

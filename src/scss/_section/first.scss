@@ -1,0 +1,18 @@
+.main {
+
+  &__first {
+    background: url("../img/header-bg1.jpg") no-repeat center/cover;
+  }
+
+  &__second {
+    background: url("../img/header-bg2.jpg") no-repeat center/cover;
+
+    .promo {
+      padding-bottom: 85px;
+    }
+  }
+
+  &__content {
+    height: 100vh;
+  }
+}

@@ -1,0 +1,70 @@
+.slick {
+  &-dots {
+    z-index: 50;
+    position: absolute;
+    display: flex;
+
+    li {
+      margin-right: 26px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include phones {
+        margin-right: 10px;
+      }
+
+      &.slick-active {
+        button {
+          background-color: $yellow;
+        }
+      }
+    }
+
+    button {
+      width: 8px;
+      height: 8px;
+      background-color: $lightBlack;
+      border-radius: 50%;
+      border: none;
+      font-size: 0;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background-color: darken($yellow, 10%);
+      }
+
+      &:active {
+        background-color: darken($yellow, 15%);
+      }
+    }
+  }
+
+  &-arrow {
+    z-index: 50;
+    position: absolute;
+    -webkit-mask: url("../img/arrow.svg") no-repeat center/cover;
+    mask: url("../img/arrow.svg") no-repeat center/cover;
+    background-color: $grey;
+    width: 50px;
+    height: 7px;
+    border: none;
+    cursor: pointer;
+    font-size: 0;
+    transition: $smothy;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &-next {
+    transform: rotate(180deg);
+  }
+}

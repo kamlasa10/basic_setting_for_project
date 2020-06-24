@@ -1,0 +1,49 @@
+.location {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    margin-right: 79px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include laptop {
+      margin-right: 30px;
+    }
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 26px;
+
+    @include phones {
+      font-size: 12px;
+      line-height: 24px;
+    }
+
+    svg {
+      width: 8px;
+      height: 11px;
+      margin-right: 20px;
+
+      @include phones {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__tel {
+    display: inline-block;
+    vertical-align: top;
+    color: inherit;
+    svg {
+      margin-right: 15px;
+      width: 12px;
+      height: 12px;
+      fill: transparent !important;
+    }
+  }
+}

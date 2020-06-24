@@ -1,0 +1,116 @@
+.slider {
+  position: relative;
+  background-color: #161B21;
+
+  .slick-dots {
+    bottom: 0;
+  }
+
+  .slick-arrow {
+    bottom: 5px;
+    left: 20%;
+  }
+
+  .slick-slide {
+    margin-right: 50px;
+  }
+
+  .slick-next {
+    left: 31%;
+  }
+
+  &__wrap {
+    display: flex;
+    margin-bottom: 64px;
+
+    @include phones {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    max-width: 720px;
+    display: flex;
+    padding-bottom: 80px;
+
+    @include laptop {
+      width: 100%;
+    }
+
+    @include phones {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    padding: 35px 22px 22px;
+    margin-bottom: 50px;
+    border: 1px solid $lightBlack;
+    margin-right: 50px;
+
+    @include laptop {
+      margin-right: 0;
+    }
+
+    @include phones {
+      margin-bottom: 25px;
+    }
+
+    &-top {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $lightBlack;
+    }
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 24px;
+    }
+  }
+
+  &__img {
+    margin-right: 30px;
+
+    svg {
+      width: 47px;
+      height: 52px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__date {
+    color: $lightBlack;
+  }
+
+  &__download {
+    svg {
+      width: 9.5px;
+      height: 13px;
+    }
+  }
+}

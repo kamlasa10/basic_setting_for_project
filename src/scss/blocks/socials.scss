@@ -1,0 +1,26 @@
+.socials {
+  &__link {
+    transition: $smothy;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: #B3AEAE;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

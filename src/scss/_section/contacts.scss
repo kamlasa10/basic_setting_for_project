@@ -1,0 +1,130 @@
+.contacts {
+  position: relative;
+  padding-top: 138px;
+
+  @include tablets {
+    padding-top: 30px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+
+    @include phones {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-right: 75px;
+
+    @include tablets {
+      margin-right: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    margin-right: 39px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: 1200px) {
+      margin-bottom: 35px;
+    }
+
+    @include phones {
+      margin-right: 0;
+    }
+  }
+
+  &__heading {
+    color: $lightBlack;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 510px) {
+      display: block;
+    }
+  }
+
+  &__text {
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-family: $cormorant;
+    font-size: 30px;
+    line-height: 45px;
+    margin-right: 18px;
+    color: $black;
+
+    @include phones {
+      font-size: 20px;
+      line-height: 35px;
+    }
+  }
+
+  &__working {
+    font-size: 10px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: $lightBlack;
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 2px;
+    font-size: 14px;
+    line-height: 26px;
+    color: $yellow;
+    border-bottom: 1px solid $yellow;
+    transition: $smothy;
+
+    &:hover {
+      color: darken($yellow, 10%);
+      border-color: darken($yellow, 15%);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+
+    @media (max-width: 1100px) {
+      display: block;
+    }
+    
+    @include phones {
+      text-align: center;
+    }
+  }
+
+  &__msg {
+    display: inline-flex;
+    margin-right: 80px;
+    white-space: nowrap;
+
+    @include phones {
+      margin-right: 0;
+    }
+
+    svg {
+      margin-right: 23px;
+      width: 22px;
+      height: 20px;
+    }
+  }
+}

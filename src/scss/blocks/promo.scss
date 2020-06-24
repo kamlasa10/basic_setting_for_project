@@ -1,0 +1,50 @@
+.promo {
+  position: relative;
+  margin-top: 160px;
+  padding-bottom: 117px;
+  display: flex;
+
+  @include phones {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .slick-dots {
+    margin-left: 77px;
+    bottom: 0;
+    button {
+      background-color: rgba($grey, 0.2);
+    }
+
+    li.slick-active {
+      button {
+        background-color: $lightBlack;
+      }
+    }
+
+    @include phones {
+      margin-left: 50px;
+    }
+  }
+
+  .slick-arrow {
+    bottom: 5px;
+    margin-left: 160px;
+
+    @include phones {
+      display: none !important;
+    }
+  }
+
+  .slick-next {
+    margin-left: 240px;
+  }
+
+  &__small-title {
+    color: $yellow;
+  }
+
+  &__btn {
+    padding: 7px 55px;
+  }
+}
