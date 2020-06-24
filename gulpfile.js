@@ -19,6 +19,7 @@ const babel = require("gulp-babel");
 const babelify = require('babelify');
 const spritesmith = require('gulp.spritesmith');
 const imagemin = require('gulp-imagemin');
+const imgCompress = require('imagemin-jpeg-recompress');
 
 const rename = require('gulp-rename');
 const del = require('del');
@@ -51,7 +52,7 @@ function spritesPng() {
 
 function svgSpriteBuild() {
   return gulp.src(paths.src + 'icons/*.svg')
-  // минифицируем svg
+    // минифицируем svg
     .pipe(svgmin({
       js2svg: {
         pretty: true
@@ -98,11 +99,15 @@ function htmls() {
 
 function img() {
   return gulp.src(paths.src + 'img/*')
-      // .pipe(imagemin([
-      //   imagemin.mozjpeg({quality: 78, progressive: true}),
-      //   imagemin.optipng({optimizationLevel: 5}),
-      // ]))
-    .pipe(gulp.dest(paths.build + 'img'));
+    .pipe(imagemin([
+      imgCompress({
+        loops: 4,
+        min: 70,
+        max: 80,
+        quality: 'high'
+      })
+      ]))
+      .pipe(gulp.dest(paths.build + 'img'));
 }
 
 function favicon() {
@@ -151,7 +156,7 @@ exports.spritesPng = spritesPng;
 
 gulp.task('build', gulp.series(
   clean,
-   gulp.parallel(styles, scripts, htmls, img, fonts,favicon, img, spritesPng)
+  gulp.parallel(styles, scripts, htmls, img, fonts, favicon, img, spritesPng)
 ));
 
 gulp.task('default', gulp.series(
