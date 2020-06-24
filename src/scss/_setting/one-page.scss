@@ -94,7 +94,7 @@ html.fp-enabled,
 #fp-nav {
   position: fixed;
   width: 150px;
-  top: 28%;
+  top: 36%;
   opacity: 1;
   -webkit-transform: translate3d(0,0,0);
 }
@@ -143,6 +143,11 @@ html.fp-enabled,
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 50%;
+  margin-bottom: 60px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 #fp-nav ul li a,
 .fp-slidesNav ul li a {

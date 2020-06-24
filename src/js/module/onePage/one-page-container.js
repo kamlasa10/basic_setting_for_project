@@ -43,9 +43,19 @@ module.exports = function () {
       },
       afterLoad: function () {
         pageNav = $('#fp-nav li')
+        $('#fp-nav').append($('.control'))
       }
     });
   }
+
+  $('.control__arrow-up').click(function(){
+    $.fn.fullpage.moveSectionUp();
+  });
+
+  $('.control__arrow-down').click(function(){
+    $.fn.fullpage.moveSectionDown();
+  });
+
   let count = 0
   const sectionsNames = ['Главная', 'Галерея', 'Планировка', 'Документы', 'Контакты']
   let pageNav

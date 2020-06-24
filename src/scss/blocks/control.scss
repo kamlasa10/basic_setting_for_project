@@ -1,0 +1,39 @@
+.control {
+  margin-top: 60px;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5px;
+
+  &__arrow {
+    display: block;
+    margin-bottom: 32px;
+    -webkit-mask: url("../img/arrow.svg") no-repeat;
+    mask: url("../img/arrow.svg") no-repeat ;
+    background-color: $lightBlack;
+    font-size: 0;
+    border: none;
+    width: 15px;
+    height: 14px;
+    cursor: pointer;
+    transition: $smothy;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &-up {
+      transform: rotate(90deg);
+      background-color: $yellow;
+    }
+
+    &-down {
+      transform: rotate(-90deg);
+      margin-left: 5px;
+    }
+  }
+
+}
