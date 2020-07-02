@@ -15,15 +15,7 @@ module.exports = function ($, slick, sliderSelector, options = {}) {
   sliderSelector.on('init afterChange', (_, slick, currentSlide = 0, nextSlide = 0) => {
     const slide = slick.$slides.eq(currentSlide)
 
-    slide.find('.slick-dots button').css({
-      'opacity': 0.2,
-      'backgroundColor': '#ddd'
-    })
-
-    slide.find('.slick-dots button').eq(currentSlide).css({
-      'opacity': 1,
-      'backgroundColor': '#757575'
-    })
+    slide.find('.slick-dots li').eq(currentSlide).addClass('slick-active')
   })
 
   const slider = template($, slick, sliderSelector, options)

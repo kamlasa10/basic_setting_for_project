@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  margin-top: 160px;
+  margin-top: 117px;
   padding-bottom: 117px;
   display: flex;
 
@@ -10,15 +10,22 @@
   }
 
   .slick-dots {
-    margin-left: 77px;
-    bottom: 0;
-    button {
-      background-color: rgba($grey, 0.2);
+    margin-left: 48px;
+    bottom: 16px;
+
+    li {
+      button {
+        &::before {
+          background-color: rgba($grey, 0.2);
+        }
+      }
     }
 
     li.slick-active {
       button {
-        background-color: $lightBlack;
+        &::before {
+          background-color: $lightBlack;
+        }
       }
     }
 
@@ -28,8 +35,8 @@
   }
 
   .slick-arrow {
-    bottom: 5px;
-    margin-left: 160px;
+    bottom: 18px;
+    margin-left: 114px;
 
     @include phones {
       display: none !important;
@@ -37,14 +44,23 @@
   }
 
   .slick-next {
-    margin-left: 240px;
+    margin-left: 175px;
   }
 
   &__small-title {
+    margin-bottom: 2px;
+    font-size: 11px;
+    line-height: 27px;
     color: $yellow;
   }
 
+  &__title {
+    margin-bottom: 44px;
+  }
+
   &__btn {
-    padding: 7px 55px;
+    font-size: 9px;
+    line-height: 18px;
+    padding: 7px 40px;
   }
 }

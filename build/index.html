@@ -261,7 +261,7 @@
             </div>
             <div class="view__wrap-right">
               <div class="view__wrap-right-content">
-                <div class="view__wrap-title">Квартира 36.05м2</div>
+                <div class="view__wrap-title">Квартира 36.05м<sup>2</sup></div>
                 <div class="view__wrap-top">
                   <div class="view__wrap-top-left">
                     <div class="view__wrap-info">
@@ -1858,50 +1858,54 @@
     </div>
   </section>
   <section class="contacts section">
-    <div class="container">
-      <div class="contacts__top">
-        <h3 class="contacts__title section-title">Офис<br> продаж</h3>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <div class="contacts__heading">Адрес</div>
-            <div class="contacts__text">
-              Киев, переулок Радистов, 16
-            </div>
-            <a href="#" class="contacts__link">Открыть в навигаторе</a>
-          </li>
-          <li class="contacts__item">
-            <div class="contacts__heading">Телефон</div>
-            <div class="contacts__wrap">
+    <div class="contacts__wrap">
+      <div class="container">
+        <div class="contacts__top">
+          <h3 class="contacts__title section-title">Офис<br> продаж</h3>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <div class="contacts__heading">Адрес</div>
               <div class="contacts__text">
-                (044) 555 57 75
+                Киев, переулок Радистов, 16
               </div>
-              <div class="contacts__working">
-                ПН-ПТ: 9:00 - 18:00
+              <a href="#" class="contacts__link">Открыть в навигаторе</a>
+            </li>
+            <li class="contacts__item">
+              <div class="contacts__heading">Телефон</div>
+              <div class="contacts__wrap">
+                <div class="contacts__text contacts__text--correct">
+                  (044) 555 57 75
+                </div>
+                <div class="contacts__working">
+                  ПН-ПТ: 9:00 - 18:00
+                </div>
               </div>
-            </div>
-            <a href="#" class="modal__link contacts__link">Заказать звонок</a>
-          </li>
-        </ul>
-      </div>
-      <div class="contacts__bottom">
-        <a href="mailto:kamlasa@ukr.net" class="contacts__link contacts__msg">
-          <svg>
-            <use xlink:href="icons/symbol/sprite.svg#message"></use>
-          </svg>
-          Написать нам
-        </a>
-        <div class="map">
-          <img src="img/map.png" alt="Карта проезда к отделу продаж">
-          <div class="map__decor map__mark">Офис продаж</div>
-          <div class="map__decor map__mark map__mark-1">
+              <a href="#" class="modal__link contacts__link">Заказать звонок</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__bottom">
+          <div class="contacts__icon">
             <svg>
-              <use xlink:href="icons/symbol/sprite.svg#club-residence"></use>
+              <use xlink:href="icons/symbol/sprite.svg#message"></use>
             </svg>
           </div>
-          <div class="map__decor map__mark map__mark-2">
-            <svg>
-              <use xlink:href="icons/symbol/sprite.svg#logo-club"></use>
-            </svg>
+          <a href="mailto:kamlasa@ukr.net" class="contacts__link contacts__msg">
+            Написать нам
+          </a>
+          <div class="map">
+            <img src="img/map.png" alt="Карта проезда к отделу продаж">
+            <div class="map__decor map__mark map__mark--1">Офис продаж</div>
+            <div class="map__decor map__mark map__mark--2">
+              <svg>
+                <use xlink:href="icons/symbol/sprite.svg#club-residence"></use>
+              </svg>
+            </div>
+            <div class="map__decor map__mark map__mark--3">
+              <svg>
+                <use xlink:href="icons/symbol/sprite.svg#logo-club"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -1921,12 +1925,12 @@
             </div>
             <a href="tel:0445555625" class="location__tel location__item">
               <svg>
-                <use xlink:href="icons/symbol/sprite.svg#phone"></use>
+                <use xlink:href="icons/symbol/sprite.svg#phone-footer"></use>
               </svg>
               Отдел продаж: (044) 555 56 25
             </a>
           </div>
-          <div class="socials footer__item">
+          <div class="socials footer__item footer__social">
             <a class="socials__link socials__link--fb" href="#">
               <svg>
                 <use xlink:href="icons/symbol/sprite.svg#fb"></use>
@@ -1938,11 +1942,11 @@
               </svg>
             </a>
           </div>
-          <div class="languages footer__item">
+          <div class="languages footer__item footer__languages">
             <a class="languages__choise languages__choise--selected" href="#">Ua</a>
             <a class="languages__choise" href="#">Ru</a>
           </div>
-          <div class="copyright">
+          <div class="copyright footer__copyright">
             <a class="copyright__link" href="#">
               <svg>
                 <use xlink:href="icons/symbol/sprite.svg#smart-orange-logo"></use>

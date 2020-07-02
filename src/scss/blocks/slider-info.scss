@@ -1,16 +1,18 @@
 .slider-info {
+  margin-top: -1px;
   min-width: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 57px;
+  margin-left: -5px;
+  margin-right: 32px;
 
   @include phones {
     margin-right: 30px;
   }
 
   &__progress {
-    height: 78px;
+    height: 65px;
     width: 1px;
     background-color: rgba($grey, 0.4);
   }
@@ -23,15 +25,15 @@
   &__text {
     transform: rotate(-90deg);
     margin-top: 4px;
-    font-size: 10px;
-    line-height: 24px;
+    font-size: 8px;
+    line-height: 13px;
     color: $lightBlack;
   }
 
   &__current {
     margin-bottom: 4px;
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 10px;
+    line-height: 18px;
     color: $yellow;
   }
 }

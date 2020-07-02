@@ -9,10 +9,14 @@
     }
   }
 
+  &__title {
+    margin-bottom: 34px;
+  }
+
   &__content {
     position: relative;
     z-index: 50;
-    max-width: 880px;
+    max-width: 710px;
     min-height: 575px;
     padding-bottom: 100px;
     background-color: $white;
@@ -21,11 +25,13 @@
   }
 
   &__tabs {
-    margin-bottom: 50px;
+    margin-bottom: 34px;
+    padding-left: 10px;
     display: flex;
     flex-wrap: wrap;
 
     @include phones {
+      padding-left: 0;
       margin-bottom: 20px;
       justify-content: space-between;
     }
@@ -40,6 +46,11 @@
         width: 100%;
       }
 
+      @include phones {
+        margin-bottom: 15px;
+        flex-direction: column;
+      }
+
       &--active {
         .view__tab {
           background-color: $white;
@@ -51,13 +62,14 @@
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
-
-          &:last-child {
-            margin-right: 0;
-          }
+          margin-right: 4px;
 
           @media (max-width: 550px) {
             justify-content: flex-start;
+          }
+
+          @include phones {
+            justify-content: center;
           }
 
           .view__sub-item {
@@ -81,13 +93,17 @@
   &__tab {
     display: inline-flex;
     white-space: nowrap;
-    padding: 9px 25px;
-    font-size: 10px;
-    line-height: 26px;
+    padding: 9px 18px;
+    font-size: 8px;
+    line-height: 14px;
     font-weight: 700;
     color: $black;
     text-transform: uppercase;
     background-color: #f1f1f1;
+
+    @media (max-width: 775px) {
+      min-width: 90px;
+    }
 
     @include phones {
       padding: 9px 15px;
@@ -96,17 +112,22 @@
 
   &__sub {
     &-list {
-      margin-right: 20px;
-      margin-left: 10px;
+      margin-right: -8px;
+      margin-left: 23px;
       align-items: flex-start;
       display: none;
+
+      @include phones {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
 
     &-item {
-      margin-right: 30px;
+      margin-right: 20px;
 
-      &:last-child {
-        margin-right: 0;
+      @media (max-width: 380px) {
+        margin-right: 12px;
       }
 
       &--active {
@@ -118,8 +139,8 @@
     }
 
     &-tab {
-      font-size: 12px;
-      line-height: 26px;
+      font-size: 10px;
+      line-height: 14px;
       color: $lightBlack;
       opacity: 0.7;
     }
@@ -137,8 +158,9 @@
     }
 
     &-left {
-      margin-left: 50px;
-      margin-right: 88px;
+      margin-left: 46px;
+      width: 30.5%;
+      margin-right: 60px;
 
       @media (max-width: 1100px) {
         margin-left: 0;
@@ -156,14 +178,17 @@
     }
 
     &-right {
+      width: 55%;
+      padding-right: 36px;
       @include laptop {
         width: 100%;
       }
 
       &-content {
+        width: 100%;
         margin-right: 50px;
-        margin-bottom: 28px;
-        padding: 10px 30px 30px;
+        margin-bottom: 26px;
+        padding: 10px 36px 24px;
         background-color: #FFFFFF;
         box-shadow: 0px 8px 20px rgba(33, 34, 36, 0.05);
 
@@ -192,8 +217,8 @@
       &-left {
         position: relative;
         width: 226px;
-        padding-right: 29px;
-        margin-right: 30px;
+        padding-right: 40px;
+        margin-right: 24px;
 
         @include phones {
           width: 100%;
@@ -214,15 +239,16 @@
         width: 170px;
 
         .view__wrap-info-value {
-          width: 45%;
+          width: 27%;
         }
       }
     }
 
     &-title {
+      margin-bottom: 8px;
       font-family: $cormorant;
-      font-size: 30px;
-      line-height: 68px;
+      font-size: 24px;
+      line-height: 38px;
       color: $black;
       font-weight: 500;
     }
@@ -233,13 +259,14 @@
 
       &-text,
       &-value {
-        font-size: 12px;
-        line-height: 26px;
+        width: 78%;
+        font-size: 10px;
+        line-height: 19px;
         color: $lightBlack;
       }
 
       &-value {
-        width: 30%;
+        width: 16%;
         margin-left: auto;
         color: $black;
       }
@@ -248,7 +275,7 @@
     &-bottom {
       display: flex;
       flex-wrap: wrap;
-      padding-bottom: 65px;
+      padding-bottom: 36px;
 
       @include laptop {
         text-align: center;
@@ -256,9 +283,15 @@
       }
     }
 
+    &-text {
+      margin-bottom: 17px;
+      font-size: 11px;
+      line-height: 19px;
+    }
+
     &-bottom-content {
       width: 45%;
-      margin-right: 20px;
+      margin-right: 22px;
       font-size: 14px;
       line-height: 24px;
       color: $lightBlack;
@@ -266,12 +299,14 @@
 
     &-block {
       width: 45%;
-      font-size: 14px;
-      line-height: 24px;
+      margin-left: 3px;
+      font-size: 11px;
+      line-height: 18px;
       color: #8a8a8a;
     }
 
     &-link {
+      letter-spacing: 1px;
       color: #000;
     }
   }
@@ -280,22 +315,36 @@
     width: 100%;
     display: flex;
     position: absolute;
+    bottom: -15px;
     align-items: center;
     justify-content: center;
-    margin-left: 80px;
+    margin-left: 118px;
+
+    @include laptop {
+      margin-left: 0;
+    }
 
     @media (max-width: 600px) {
       margin-left: 0;
     }
 
     &-arrow {
-      margin-top: 3px;
+      margin-top: 16px;
       display: flex;
 
       .slick-arrow {
         margin-left: 20px;
         position: static;
         height: 7px;
+        background-color: $lightBlack;
+      }
+
+      .slick-prev {
+        transform: translateX(-9px);
+      }
+
+      .slick-next {
+        transform: rotate(180deg) translateX(11px);
       }
 
       @include phones {

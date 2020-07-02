@@ -8,7 +8,6 @@ module.exports = function () {
   sliderDocument($, slick, '.slider__content', {
     slidesToShow: 3,
     slidesToScroll: 3,
-    autoplay: true,
     autoplaySpeed: 2000,
     dots: true,
     responsive: [

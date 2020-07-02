@@ -36,10 +36,7 @@ module.exports = function () {
           $('#fp-nav li').eq(count).append(`<div class="section__name">${sectionsNames[count]}</div>`)
         }
 
-        pageNav.eq(count).css({
-          'backgroundColor': '#ddd',
-          'border-color': '#a68e52'
-        })
+        pageNav.eq(count).addClass('active-section')
       },
       afterLoad: function () {
         pageNav = $('#fp-nav li')

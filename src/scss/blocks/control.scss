@@ -1,12 +1,12 @@
 .control {
-  margin-top: 60px;
+  margin-top: 51px;
   flex-direction: column;
   align-items: center;
-  margin-left: 5px;
+  margin-left: 2px;
 
   &__arrow {
     display: block;
-    margin-bottom: 32px;
+    margin-bottom: 22px;
     -webkit-mask: url("../img/arrow.svg") no-repeat;
     mask: url("../img/arrow.svg") no-repeat ;
     background-color: $lightBlack;

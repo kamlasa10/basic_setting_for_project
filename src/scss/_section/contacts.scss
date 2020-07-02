@@ -1,23 +1,27 @@
 .contacts {
+  padding-top: 85px;
   position: relative;
-  padding-top: 138px;
 
   @include tablets {
     padding-top: 30px;
   }
 
   &__top {
+    align-items: flex-start;
     display: flex;
-    align-items: center;
 
-    @include phones {
-      display: block;
-      text-align: center;
+    @media (max-width: 775px) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 
   &__title {
-    margin-right: 75px;
+    margin-top: -14px;
+    font-size: 55px;
+    line-height: 53px;
+    margin-right: 60px;
+    margin-bottom: 47px;
 
     @include tablets {
       margin-right: 30px;
@@ -27,14 +31,15 @@
   &__list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 585px) {
       display: block;
     }
   }
 
   &__item {
-    margin-right: 39px;
+    margin-right: 14px;
 
     &:last-child {
       margin-right: 0;
@@ -54,6 +59,7 @@
   }
 
   &__wrap {
+    position: relative;
     display: flex;
     align-items: center;
 
@@ -64,32 +70,36 @@
 
   &__text {
     margin-top: -5px;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
     font-family: $cormorant;
-    font-size: 30px;
-    line-height: 45px;
-    margin-right: 18px;
+    font-size: 24px;
+    line-height: 37px;
+    margin-right: 17px;
     color: $black;
 
     @include phones {
       font-size: 20px;
       line-height: 35px;
     }
+
+    &--correct {
+      letter-spacing: 1.2px;
+    }
   }
 
   &__working {
-    font-size: 10px;
-    line-height: 26px;
+    margin-top: -7px;
+    font-size: 9px;
+    line-height: 23px;
     text-transform: uppercase;
     color: $lightBlack;
   }
 
   &__link {
     display: inline-block;
-    vertical-align: top;
-    padding-bottom: 2px;
-    font-size: 14px;
-    line-height: 26px;
+    vertical-align: top;;
+    font-size: 11px;
+    line-height: 24px;
     color: $yellow;
     border-bottom: 1px solid $yellow;
     transition: $smothy;
@@ -105,6 +115,12 @@
 
     @media (max-width: 1100px) {
       display: block;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 20px;
+      text-align: center;
     }
     
     @include phones {
@@ -113,16 +129,23 @@
   }
 
   &__msg {
+    align-self: flex-start;
     display: inline-flex;
-    margin-right: 80px;
+    margin-right: 97px;
     white-space: nowrap;
+
+    @media (max-width: 1010px) {
+      margin-right: 0;
+    }
 
     @include phones {
       margin-right: 0;
     }
+  }
 
+  &__icon {
     svg {
-      margin-right: 23px;
+      margin-right: 16px;
       width: 22px;
       height: 20px;
     }

@@ -72,7 +72,7 @@ function styles() {
     .pipe(sassGlob())
     .pipe(sass()) // { outputStyle: 'compressed' }
     .pipe(autoprefixer())
-    .pipe(cleanCSS())
+    //.pipe(cleanCSS())
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest(paths.build + 'css/'))
 }
