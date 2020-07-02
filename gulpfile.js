@@ -99,14 +99,7 @@ function htmls() {
 
 function img() {
   return gulp.src(paths.src + 'img/*')
-    .pipe(imagemin([
-      imgCompress({
-        loops: 4,
-        min: 70,
-        max: 80,
-        quality: 'high'
-      })
-      ]))
+
       .pipe(gulp.dest(paths.build + 'img'));
 }
 
